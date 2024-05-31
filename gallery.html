@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Surprise</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="message.html">Message</a></li>
-                <li><a href="event.html">Event</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Photo Gallery</h1>
-        <div class="gallery">
-            <div class="gallery-item"><img src="photo1.jpg" alt="Photo 1"></div>
-            <div class="gallery-item"><img src="photo2.jpg" alt="Photo 2"></div>
-            <div class="gallery-item"><img src="photo3.jpg" alt="Photo 3"></div>
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 by Ugo Anamege. All rights reserved.</p>
-    </footer>
+  <header>
+    <div class="logo">Surprise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="event.html">Event</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+      <a href="photo1.jpg" data-lightbox="gallery"><img src="photo1.jpg" alt="Photo 1"></a>
+      <a href="photo2.jpg" data-lightbox="gallery"><img src="photo2.jpg" alt="Photo 2"></a>
+      <a href="photo3.jpg" data-lightbox="gallery"><img src="photo3.jpg" alt="Photo 3"></a>
+      <!-- Add more photos as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-media">
+      <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="contact">
+      <a href="mailto:contact@example.com">contact@example.com</a>
+    </div>
+    <p>&copy; 2024 by Ugo Anamege. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
