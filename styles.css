@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,7 +6,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header Styles */
 header {
     background-color: #000;
     color: #fff;
@@ -40,8 +39,26 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+.verse-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
 
-/* Hero Section Styles */
+.verse-popup.show {
+    display: block;
+    opacity: 1;
+}
+
+
 .hero {
     height: 100vh;
     background: url('hero.jpg') no-repeat center center/cover;
@@ -51,7 +68,6 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 70px; /* Adjust for fixed header */
 }
 
 .hero .hero-content {
@@ -81,13 +97,11 @@ header nav ul li a {
     animation: buttonFadeIn 3s ease-in-out;
 }
 
-/* Gallery Styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 2em;
-    margin-top: 100px; /* Adjust for fixed header */
 }
 
 .gallery-item {
@@ -105,7 +119,6 @@ header nav ul li a {
     border-radius: 10px;
 }
 
-/* Message Section Styles */
 .message-section {
     padding: 2em;
     background-color: #f4f4f4;
@@ -125,7 +138,6 @@ header nav ul li a {
     color: #333;
 }
 
-/* Footer Styles */
 footer {
     background-color: #000;
     color: #fff;
@@ -151,93 +163,3 @@ footer {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
 }
-
-/* Base styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  header .logo {
-    font-size: 24px;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin-left: 20px;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  main {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .gallery a, .swiper-container {
-    width: 100%;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    header nav ul {
-      flex-direction: column;
-    }
-  
-    header nav ul li {
-      margin: 10px 0;
-    }
-  
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-  
-    .swiper-slide img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .gallery {
-      grid-template-columns: 1fr;
-    }
-  
-    .swiper-slide img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
-  

@@ -22,8 +22,8 @@
   <main>
     <h1>Photo Gallery</h1>
     <div class="gallery">
-      <a href="photo1.jpg" data-lightbox="gallery"><img src="photo1.jpg" alt="Photo 1"></a>
-      <a href="photo2.jpg" data-lightbox="gallery"><img src="photo2.jpg" alt="Photo 2"></a>
+      <a href="photo1.jpg" data-lightbox="gallery"><img src="1.jpg" alt="Photo 1"></a>
+      <a href="photo2.jpg" data-lightbox="gallery"><img src="Photo.jpeg" alt="Photo 2"></a>
       <a href="photo3.jpg" data-lightbox="gallery"><img src="photo3.jpg" alt="Photo 3"></a>
       <!-- Add more photos as needed -->
     </div>
@@ -42,5 +42,54 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+    </script>
 </body>
 </html>

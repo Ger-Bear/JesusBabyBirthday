@@ -6,6 +6,36 @@
   <title>Surprise Birthday</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Bible Verse</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="versePopup" class="verse-popup">
+            <p id="verseText"></p>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+  <style>
+    .hero {
+        text-align: center;
+    }
+    .swiper-container {
+        width: 600px;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 </head>
 <body>
   <header>
@@ -20,26 +50,118 @@
     </nav>
   </header>
 
+  
+
   <main class="hero">
     <div class="hero-content">
-      <h1>Happy Birthday, Joan Dziedzorm Ac-Lumor</h1>
+      <h1>    Happy Birthday,   </h1>
+      <h1>Joan Ac-Lumor</h1>
       <p>Discover your special surprise.</p>
       <a href="event.html" class="cta-button">Join the Surprise Event</a>
     </div>
 
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="photo1.jpg" alt="Photo 1"></div>
-        <div class="swiper-slide"><img src="photo2.jpg" alt="Photo 2"></div>
-        <div class="swiper-slide"><img src="photo3.jpg" alt="Photo 3"></div>
+        <div class="swiper-slide"><img src="./Pictures/1.jpg" alt="Photo 1"></div>
+        <div class="swiper-slide"><img src="./Pictures/2.jpg" alt="Photo 2"></div>
+        <div class="swiper-slide"><img src="./Pictures/3.jpg" alt="Photo 3"></div>
         <!-- Add more slides as needed -->
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
+
+   
+
+    <!-- <div>
+    <h1>Interactive Map Example</h1>
+  <div id="map"></div>
+  <div id="directions"></div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([41.556, -72.654], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(map);
+
+    const marker = L.marker([41.556, -72.654]).addTo(map);
+
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+    const directions = L.mapbox.directions({
+      profile: 'mapbox/driving',
+      accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN'
+    });
+
+    const directionsLayer = L.mapbox.directions.layer(directions).addTo(map);
+    const directionsInputControl = L.mapbox.directions.inputControl('inputs', directions).addTo(map);
+    const directionsErrorsControl = L.mapbox.directions.errorsControl('errors', directions).addTo(map);
+    const directionsRoutesControl = L.mapbox.directions.routesControl('routes', directions).addTo(map);
+    const directionsInstructionsControl = L.mapbox.directions.instructionsControl('instructions', directions).addTo(map);
+
+    navigator.geolocation.getCurrentPosition(position => {
+      const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
+      const userMarker = L.marker(userLocation).addTo(map);
+      map.setView(userLocation, 16);
+      directions.setOrigin(userLocation);
+      directions.setDestination(L.latLng(41.556, -72.654));
+      directions.query((error, result) => {
+        if (!error) {
+          const distance = result.routes[0].distance / 1609.34; // convert meters to miles
+          const duration = result.routes[0].duration / 60; // convert seconds to minutes
+          const directionsPanel = document.getElementById('directions');
+          directionsPanel.innerHTML = `Distance: ${distance.toFixed(2)} miles<br>Duration: ${duration.toFixed(0)} minutes`;
+        }
+      });
+    });
+  </script>
+</div> -->
+    <script src="script.js"></script>
   </main>
 
+  <div id="quiz-container">
+    <div id="question">Question will appear here</div>
+    <ul id="answers">
+        <!-- Options will be populated here -->
+    </ul>
+    <button id="submit">Submit Answer</button>
+    <div id="result">Your score: <span id="score">0</span></div>
+</div>
+
+
+
+<!--
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Birthday Quiz Game</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <div id="quiz-container">
+          <div id="question">Question will appear here</div>
+          <ul id="answers">
+               
+          </ul>
+          <button id="submit">Submit Answer</button>
+          <div id="result">Your score: <span id="score">0</span></div>
+      </div>
+      <script src="script.js"></script>
+  </body>
+  </html>-->
+  
+
+
+<!--
   <section class="testimonials">
     <h2>What People Are Saying</h2>
     <div class="testimonial">
@@ -83,7 +205,9 @@
       <img src="sponsor1.png" alt="Sponsor 1">
       <img src="sponsor2.png" alt="Sponsor 2">
       <img src="sponsor3.png" alt="Sponsor 3">
-      <!-- Add more sponsor logos as needed -->
+       
+
+
     </div>
   </section>
 
@@ -105,10 +229,13 @@
         <h3>John Smith</h3>
         <p>Event Coordinator</p>
       </div>
-      <!-- Add more team members as needed -->
+      
     </div>
   </section>
+-->
 
+
+  <!--
   <section class="donate">
     <h2>Support Our Cause</h2>
     <p>If you would like to support our cause, please consider making a donation.</p>
@@ -120,8 +247,10 @@
       <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
   </section>
-
-  <footer>
+ --> 
+  
+ <footer>
+    <!--
     <div class="social-media">
       <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a>
       <a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a>
@@ -130,6 +259,8 @@
     <div class="contact">
       <a href="mailto:contact@example.com">contact@example.com</a>
     </div>
+-->
+    <p> Proverbs 31:26 She speaks with a gentle wisdom. </p>
     <p>&copy; 2024 by Ugo Anamege. All rights reserved.</p>
   </footer>
 
@@ -138,7 +269,7 @@
 </body>
 </html>
 
-
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -198,5 +329,70 @@
       });
     });
   </script>
+</body>
+</html>
+-->
+
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+    </script>
 </body>
 </html>
