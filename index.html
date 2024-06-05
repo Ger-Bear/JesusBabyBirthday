@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Birthday</title>
+  <link rel="stylesheet" href="newStyle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Surprise</div>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="message.html">Message</a></li>
+        <li><a href="event.html">Event</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Happy Birthday,</h1>
+      <h1>Joan Ac-Lumor</h1>
+      <p>Discover your special surprise.</p>
+      <a href="event.html" class="cta-button">Join the Surprise Event</a>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./Pictures/1.jpg" alt="Photo 1"></div>
+        <div class="swiper-slide"><img src="./Pictures/2.jpg" alt="Photo 2"></div>
+        <div class="swiper-slide"><img src="./Pictures/3.jpg" alt="Photo 3"></div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <h1>Interactive Map Example</h1>
+    <div id="map"></div>
+    <div id="directions"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </main>
+
+  <!-- Countdown Clock -->
+  <div class="countdown-container">
+    <h2>Countdown to June 30th, 2024</h2>
+    <div id="countdown">
+      <div><span id="days"></span> Days</div>
+      <div><span id="hours"></span> Hours</div>
+      <div><span id="minutes"></span> Minutes</div>
+      <div><span id="seconds"></span> Seconds</div>
+    </div>
+  </div>
+
+  <div id="quiz-container">
+    <div id="question">Question will appear here</div>
+    <ul id="answers">
+        <!-- Options will be populated here -->
+    </ul>
+    <button id="submit">Submit Answer</button>
+    <div id="result">Your score: <span id="score">0</span></div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    // Menu toggle script
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+
+    // Countdown script
+    function countdown() {
+      const endDate = new Date('June 30, 2024 00:00:00').getTime();
+      const now = new Date().getTime();
+      const timeLeft = endDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = days;
+      document.getElementById('hours').innerText = hours;
+      document.getElementById('minutes').innerText = minutes;
+      document.getElementById('seconds').innerText = seconds;
+    }
+
+    setInterval(countdown, 1000);
+  </script>
+</body>
+
+<footer>
+  <p>Proverbs 31:26 She speaks with a gentle wisdom.</p>
+  <p>&copy; 2024 by Ugo Anamege. All rights reserved.</p>
+</footer>
+</html>
