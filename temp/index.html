@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Birthday</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Surprise</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="message.html">Message</a>
+        <a href="event.html">Event</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="hero">
+    <div class="hero-content">
+        <h1>Happy Birthday,</h1>
+        <h1>Joan Ac-Lumor</h1>
+        <p>Discover your special surprise</p>
+        <a href="events.html" class="cta-button">Join the Surprise Event</a>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide_1"><img src="../Pictures/1.jpg"></div>
+            <div class="swiper-slide slide_2"><img src="../Pictures/2.jpg"></div>
+            <div class="swiper-slide slide_3"><img src="../Pictures/3.jpg"></div>
+            <div class="swiper-slide slide_3"><img src="../Pictures/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+  </main>
+
+  <!-- Quiz -->
+  <div class="quiz-container">
+    <h2 id="heading">Birthday Quiz</h2>
+  </div>
+
+  <!-- Location -->
+  <div class="location">
+    <h2>Location of the festivities</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.502684138496!2d-71.12082372256621!3d42.37443677119145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e377427d7f0199%3A0x5937c65cee2427f0!2sHarvard%20University!5e0!3m2!1sen!2sus!4v1720153854866!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <footer class="footer">
+    <p class="bible-verse">Proverbs 31:26 She speaks with a gentle wisdom.</p>
+    <p>&copy; 2024 by Ugo Anamege. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
+  <script src="quiz.js"></script>
+  <script src="data/questions.json"></script>
+</body>
+</html>
