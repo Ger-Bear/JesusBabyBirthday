@@ -1,32 +1,62 @@
 [
     {
-      "question": "What is Joan's favorite color",
+      "question": "What is Joan's favorite color?",
       "options": [
         "Red",
-        "Green",
+        "Black",
         "Blue",
-        "Orange"
+        "Pink"
       ],
-      "answer": "Red"
+      "answer": "Black"
     },
     {
-      "question": "How old is Joan",
+      "question": "How old is Joan?",
       "options": [
-        32,
+        12,
         53,
-        24,
+        23,
         22
       ],
-      "answer": 22
+      "answer": 23
     },
     {
-      "question": "What is the terminal velocity of an unladen swallow",
+      "question": "What is the terminal velocity of an unladen swallow?",
       "options": [
         84,
         32,
-        69,
-        108
+        21,
+        20
       ],
-      "answer": 108
+      "answer": 20
+    },
+    {
+      "question": "What is Joan's favorite food?",
+      "options": [
+        "Bread and Toothpaste",
+        "Waace",
+        "Banku",
+        "Nigerian Jollof"
+      ],
+      "answer": "Nigerian Jollof"
+    },
+    {
+      "question": "What is Joan's dream wedding ring?",
+      "options": [
+        "Emerald",
+        "Oval",
+        "Radiant",
+        "Marquise"
+      ],
+      "answer": "Oval"
+    },
+    {
+      "question": "Where is Joan's favorite spot?",
+      "options": [
+        "Church",
+        "Museum",
+        "Beach",
+        "Home"
+      ],
+      "answer": "Beach"
     }
   ]
