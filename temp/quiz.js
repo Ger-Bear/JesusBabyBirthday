@@ -57,7 +57,6 @@ class Quiz {
                 var selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
                 if (selectedAnswer.value) {
-                    console.log(`Selected: ${selectedAnswer.value}. Correct: ${question.answer}`);
                     if (selectedAnswer.value === question.answer.toString()) {
                         resultElement.innerHTML = 'Correct!';
                         resultElement.style.color = 'green';
@@ -69,14 +68,10 @@ class Quiz {
 
                     resultElement.classList.remove('hidden');
                     scoreElement.textContent = `Your total score: ${this.score}`;
-
-                    console.log('Curr', index);
                     
                     await sleep(1000);
                     resolve();
                     index += 1;
-
-                    console.log("Next!", index);
                 }
             });
         });
