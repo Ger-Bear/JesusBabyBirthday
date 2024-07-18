@@ -54,7 +54,7 @@ function createSwiper(pics, index) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const pictures = shuffle(range(1, 56)).map((i) => `../Pictures/${i}.jpg`);
+    const pictures = shuffle(range(1, 56)).map((i) => `/Pictures/${i}.jpg`);
     // console.log('Pic', pictures);
     const pictureGroups = paritition(pictures, 4);
 
