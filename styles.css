@@ -1,165 +1,219 @@
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
-header {
-    background-color: #000;
-    color: #fff;
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+	border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 1rem;
+    background-color: #333;
 }
 
-header .logo {
-    font-size: 1.5em;
+.logo {
+    display: flex;
     font-weight: bold;
+    font-size: x-large;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-links {
     display: flex;
-}
+    gap: 1rem;
 
-header nav ul li {
-    margin: 0 1em;
-}
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-.verse-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    display: none;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.verse-popup.show {
-    display: block;
-    opacity: 1;
-}
-
-
-.hero {
-    height: 100vh;
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero .hero-content {
-    max-width: 600px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 0.5em 0;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-.cta-button {
-    background-color: #001a57; /* Duke Blue */
-    color: #fff;
-    padding: 0.5em 2em;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin-top: 1em;
-    display: inline-block;
-    animation: buttonFadeIn 3s ease-in-out;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2em;
-}
-
-.gallery-item {
-    margin: 1em;
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.message-section {
-    padding: 2em;
-    background-color: #f4f4f4;
-}
-
-.message-content {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
-}
-
-.message-content p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #333;
+    a:hover,
+    a.active {
+        background-color: #555;
+    }
 }
 
 footer {
-    background-color: #000;
-    color: #fff;
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
+
+    .footer-content {
+        margin: 0 auto;
+    }
+
+    .bible-verse {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.hero {
+    padding-top: 2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        margin: 0.5rem 0;
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: #666;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.swiper {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    background-color: white;
+    color: #666;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        display: flex;
+        height: auto;
+        max-height: 300px;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
-@keyframes buttonFadeIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
+.quiz-container {
+    text-align: left;
+    padding: 2rem;
+    background-color: white;
+    color: #666;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #question {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    input[type="radio"] {
+        margin-right: 0.5rem;
+    }
+     
+    button {
+        padding: 0.5rem 0.5rem;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+      }
+      
+    #result {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+      
+    #score {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+      
+    .hidden {
+        display: none;
+    }
+}
+
+.location {
+    padding-bottom: 50%;
+    position: relative;
+
+    /* background-color: inherit; */
+    color: #333;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    iframe {
+        width: 100%;
+        max-height: 500px;
+        left: 0;
+        position: absolute;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 }
